@@ -6,13 +6,13 @@ def check_address(address):
         s = s.strip()
         if s.find(',') == -1:
             s = s + ','
-        print(s.replace(",", "") + " : " + check_regex(s))
+        print(check_regex(s)+" : "+s.replace(",", "") )
 
 
 def check_regex(ip):
     if re.match('(([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}'
                 '([[1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]),', ip):
-        return "True"
+        return "True "
     else:
         return "False"
 
